@@ -51,22 +51,6 @@ describe('[utils] Misc', () => {
       expect(stacks[3]).toHaveLength(13); // fourth person
     });
 
-    it('should be able to handle the remaining when not evenly distributed', () => {
-      const numOfPeople = 3;
-      const stacks = getResult(numOfPeople);
-      expect(stacks).toHaveLength(numOfPeople);
-      expect(stacks[0]).toHaveLength(18); // first person
-      expect(stacks[1]).toHaveLength(17); // second person
-      expect(stacks[2]).toHaveLength(17); // third person
-    });
-
-    it('should be able to handle both string and integer type number', () => {
-      expect(getResult(4)).toHaveLength(4);
-      expect(getResult('4')).toHaveLength(4);
-      expect(getResult(5)).toHaveLength(5);
-      expect(getResult(' 5')).toHaveLength(5);
-    });
-
     it('should only accept whole number', () => {
       expect(getResult(4.4)).toHaveLength(0);
     });
@@ -76,6 +60,7 @@ describe('[utils] Misc', () => {
       expect(getResult()).toHaveLength(0);
       expect(getResult(0)).toHaveLength(0);
       expect(getResult(-1)).toHaveLength(0);
+      expect(getResult('4')).toHaveLength(0);
       expect(getResult('abc')).toHaveLength(0);
       expect(getResult([])).toHaveLength(0);
       expect(getResult(true)).toHaveLength(0);
