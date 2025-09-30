@@ -7,7 +7,7 @@
   "dependencies": {
     "@styled-icons/icomoon": "^10.6.0",
     "@styled-icons/open-iconic": "^10.6.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^5.1.1"
